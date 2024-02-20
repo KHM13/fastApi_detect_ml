@@ -47,9 +47,10 @@ class LearningPipeline():
                 return result
             else:
                 print("[Error] Pipeline is None")
-                return False
+                return 0
         except:
             print(f"[Predict Error] : {traceback.format_exc()}")
+            return 0
 
     # 탐지율
     def predict_proba(self, data):
@@ -59,7 +60,8 @@ class LearningPipeline():
                 return result
             else:
                 print("[Error] Pipeline is None")
-                return False
+                return 0.0
         except:
             print(f"[Predict Error] : {traceback.format_exc()}")
+            return 0.0
 
